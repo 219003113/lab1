@@ -52,8 +52,10 @@
 					<script>
         function trig(){
             $zoho.salesiq.visitor.customaction("Trigger");
+	    console.log("Hello_Custom function 1");
             $zoho.salesiq.visitor.trigger(function (triggername, visitorinfo) {
                 // Your code here
+		    console.log(visitorinfo);
                 if(triggername=="Alerter"){
                     alert("Alerter JS API");
 			console.log("Alerter JS API");
