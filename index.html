@@ -53,15 +53,12 @@
         function trig(){
             $zoho.salesiq.visitor.customaction("Trigger");
 	    console.log("Hello_Custom function 1");
-            $zoho.salesiq.ready = function (embedinfo){ $zoho.salesiq.visitor.trigger(function(triggername, visitorinfo){
+
+		}
+           $zoho.salesiq.ready = function (embedinfo){ $zoho.salesiq.visitor.trigger(function(triggername, visitorinfo){
 if (triggername == 'Alerter') { console.log("Triger JS api"); }
 
-} );
-//other JSAPIs here
-
-}
-            // other JSAPIs here
-        }
+} );}
     </script>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
