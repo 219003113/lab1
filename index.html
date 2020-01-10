@@ -53,14 +53,13 @@
         function trig(){
             $zoho.salesiq.visitor.customaction("Trigger");
 	    console.log("Hello_Custom function 1");
-            $zoho.salesiq.visitor.trigger(function (triggername, visitorinfo) {
-                // Your code here
-		    console.log(visitorinfo);
-                if(triggername=="Alerter"){
-                    alert("Alerter JS API");
-			console.log("Alerter JS API");
-                }
-            });
+            $zoho.salesiq.ready = function (embedinfo){ $zoho.salesiq.visitor.trigger(function(triggername, visitorinfo){
+if (triggername == 'Alerter') { console.log("Triger JS api"); }
+
+} );
+//other JSAPIs here
+
+}
             // other JSAPIs here
         }
     </script>
