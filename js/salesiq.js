@@ -7,20 +7,13 @@ function myFunction() {
   console.log("Triggered"); 
 	 alert("Hello! I am an alert box!!");
 }
-$zoho.salesiq.ready = function (embedinfo)
 
-{
-
-$zoho.salesiq.visitor.trigger(function(triggername, visitorinfo)
-   {
-
-
-     if (triggername=='lead')
-     {
-        myFunction();
-	
-     }
-
-   });
-
-}
+		$zoho.salesiq.ready = function (embedinfo) {
+    		$zoho.salesiq.visitor.trigger(function (triggername, visitorinfo) {
+        		if (triggername == 'lead') {
+            		    console.log("Hello");
+				myFunction();
+        		}
+   	 	});
+   	 	// other JSAPIs here
+		}
