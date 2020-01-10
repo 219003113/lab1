@@ -47,6 +47,21 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
+					<button id="custom_button" onclick="trig()">Custom Function
+    </button>
+					<script>
+        function trig(){
+            $zoho.salesiq.visitor.customaction("Trigger");
+           /* $zoho.salesiq.visitor.trigger(function (triggername, visitorinfo) {
+                // Your code here
+                if(triggername=="Alerter"){
+                    alert("Alerter JS API");
+			console.log("Alerter JS API");
+                }
+            });*/
+            // other JSAPIs here
+        }
+    </script>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
