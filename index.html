@@ -1184,6 +1184,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="https://cdn.optimizely.com/js/16925945243.js"></script>
 	<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101224539);</script>
 <script async src="//static.getclicky.com/js"></script>
+	<button id="custom_button" onclick="trig()">Custom Function after issue
+    </button>
+					<script>
+        function trig(){
+            $zoho.salesiq.visitor.customaction("new");
+    console.log("Hello_Custom function 1");
+
+		}
+           $zoho.salesiq.ready = function (embedinfo){ $zoho.salesiq.visitor.trigger(function(triggername, visitorinfo){
+if (triggername == 'Alerter') { console.log("Triger JS api"); alert("JS API"); }
+
+} );}
+    </script>
 </body>
 
 </html>
